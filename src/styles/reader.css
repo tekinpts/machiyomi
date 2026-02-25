@@ -1,0 +1,229 @@
+.reader {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.reader-loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #000;
+  color: var(--text-secondary);
+}
+
+/* Controls */
+.reader-controls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.reader-controls.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.reader-controls.top {
+  top: 0;
+  transform: translateY(-100%);
+  padding-top: 40px; /* macOS traffic lights */
+}
+
+.reader-controls.top.visible {
+  transform: translateY(0);
+}
+
+.reader-controls.bottom {
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.reader-controls.bottom.visible {
+  transform: translateY(0);
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.reader-chapter-info {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reader-mode-switch {
+  display: flex;
+  gap: 4px;
+}
+
+.reader-mode-switch button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.reader-mode-switch button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.reader-mode-switch button.active {
+  background: var(--accent);
+}
+
+/* Paged mode */
+.reader-paged {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reader-page-img {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: contain;
+}
+
+/* Scrolling mode */
+.reader-scroll {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reader-scroll-img {
+  max-width: 850px;
+  width: 100%;
+  display: block;
+}
+
+.reader-scroll.webtoon-mode .reader-scroll-img {
+  max-width: 700px;
+}
+
+/* Chapter end */
+.reader-chapter-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  color: var(--text-secondary);
+}
+
+.reader-chapter-end p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-next-chapter,
+.btn-prev-chapter {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.btn-next-chapter:hover,
+.btn-prev-chapter:hover {
+  background: var(--accent-hover);
+}
+
+.btn-next-chapter:disabled,
+.btn-prev-chapter:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-back-detail {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+}
+
+.btn-back-detail:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Page slider */
+.page-slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 400px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.page-slider input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+
+.page-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 50%;
+  cursor: pointer;
+}

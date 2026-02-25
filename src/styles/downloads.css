@@ -1,0 +1,76 @@
+.downloads-page {
+  padding: 24px;
+}
+
+.downloads-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.downloads-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.downloads-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+}
+
+.download-path-card,
+.download-tips {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.download-path-card h3,
+.download-tips h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.download-path {
+  font-size: 13px;
+  color: var(--accent);
+  background: var(--bg-tertiary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  word-break: break-all;
+  margin-bottom: 12px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.download-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.download-tips ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.download-tips li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.download-tips li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}

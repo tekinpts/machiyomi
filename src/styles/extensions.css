@@ -1,0 +1,231 @@
+.extensions-page {
+  padding: 24px;
+  max-width: 900px;
+}
+
+.extensions-page h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.extensions-info {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.extensions-toolbar {
+  margin-bottom: 20px;
+}
+
+.extensions-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #333;
+}
+
+.extensions-tabs button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+}
+
+.extensions-tabs button:hover {
+  color: #fff;
+}
+
+.extensions-tabs button.active {
+  color: #b388ff;
+  border-bottom-color: #b388ff;
+}
+
+.extensions-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.extensions-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.extensions-search:focus {
+  border-color: #b388ff;
+}
+
+.extensions-lang-select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.extensions-lang-select:focus {
+  border-color: #b388ff;
+}
+
+.extensions-nsfw-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #888;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.extensions-nsfw-toggle input[type="checkbox"] {
+  accent-color: #b388ff;
+}
+
+.extensions-loading,
+.extensions-empty {
+  text-align: center;
+  color: #888;
+  padding: 60px 20px;
+  font-size: 16px;
+}
+
+.extensions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.extension-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #16213e;
+  border-radius: 10px;
+  transition: background 0.15s;
+}
+
+.extension-card:hover {
+  background: #1a2744;
+}
+
+.extension-icon {
+  font-size: 28px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f3460;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.extension-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.extension-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.extension-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+.extension-version {
+  color: #666;
+  font-size: 12px;
+}
+
+.extension-lang-badge {
+  background: #0f3460;
+  color: #7c9fd4;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.extension-nsfw {
+  background: #6b2020;
+  color: #ff6b6b;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.extension-sources {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.extension-source-tag {
+  color: #888;
+  font-size: 12px;
+  background: #1a1a2e;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.extension-source-more {
+  color: #666;
+  font-size: 12px;
+}
+
+.extension-action {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  background: #b388ff;
+  color: #0a0a1a;
+  flex-shrink: 0;
+}
+
+.extension-action:hover {
+  background: #ce93d8;
+  transform: scale(1.03);
+}
+
+.extension-action.installed {
+  background: #333;
+  color: #aaa;
+}
+
+.extension-action.installed:hover {
+  background: #6b2020;
+  color: #ff6b6b;
+}
